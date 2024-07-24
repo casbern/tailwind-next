@@ -2,6 +2,7 @@ import { SettingsTabs } from '@/components/SettingsTabs'
 import * as Input from '@/components/Input'
 import { Mail } from 'lucide-react'
 import * as FileInput from '@/components/Form/FileInput'
+import { Select } from '@/components/Form/Select'
 
 export default function Home() {
   return (
@@ -115,7 +116,7 @@ export default function Home() {
               Country
             </label>
 
-            <div></div>
+            <Select />
           </div>
 
           <div className="grid-cols-form grid gap-3 pt-5">
@@ -151,9 +152,10 @@ export default function Home() {
               </span>
             </label>
 
-            <FileInput.Root className="flex items-start gap-5">
+            <FileInput.Root>
               <FileInput.Trigger />
-              <FileInput.Control />
+              <FileInput.FileList />
+              <FileInput.Control multiple />
             </FileInput.Root>
           </div>
 
